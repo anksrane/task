@@ -1,0 +1,34 @@
+{
+    "manifest_version": 3,
+    "name": "Shopify Extension",
+    "version": "1.0",
+    "description": "Detects if a website is built with Shopify.",
+    "permissions": [
+        "scripting",
+        "tabs"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },    
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"]
+        }
+    ],
+    "action": {
+        "default_icon": {
+            "16": "icon-default-16.png",
+            "48": "icon-default-48.png",
+            "128": "icon-default-128.png"
+        }
+    },
+    "icons": {
+        "16": "icon-default-16.png",
+        "48": "icon-default-48.png",
+        "128": "icon-default-128.png"
+    }
+}
